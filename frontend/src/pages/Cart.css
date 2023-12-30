@@ -1,0 +1,118 @@
+/* Cart.css */
+.cart-container {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Limit the maximum width of images */
+table td img {
+  max-width: 100px; /* Adjust the value as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.coupon-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.coupon-section label {
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.coupon-section input {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.cart-totals {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.cart-totals h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.cart-totals div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.cart-summary .cart-totals h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cart-summary .cart-totals span {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #444;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 6px; /* Add some spacing around the quantity */
+}

@@ -1,0 +1,178 @@
+/* AboutUs.css */
+
+/* General styles to keep the content nicely padded */
+.about-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section title styles */
+.about-us h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #333;
+  font-size: 2em;
+}
+
+/* Meet the Team styles */
+.meet-the-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 2em;
+  font-size: large;
+}
+
+.team-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* This adds space between the team members */
+}
+
+.team-member {
+  flex: 1;
+  min-width: 250px; /* Adjust this value to set the minimum width for each member */
+  max-width: 300px; /* Adjust this value to set the maximum width for each member */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.team-member h3 {
+  color: #444;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.team-member p {
+  color: #444444;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Our Mission styles */
+.our-mission {
+  background-color: #f7f7f7;
+  padding: 2em;
+  margin-bottom: 2em;
+  font-size: large;
+}
+
+.our-mission p {
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Testimonials styles */
+.testimonials {
+  background-color: #fff;
+  padding: 2em;
+}
+
+.testimonial {
+  margin-bottom: 1em;
+}
+
+.testimonial blockquote {
+  quotes: "“" "”" "‘" "’";
+  padding: 1em 20px;
+  background-color: #f0f0f0;
+  border-left: 5px solid #9c27b0;
+  margin: 0;
+  position: relative;
+}
+
+.testimonial blockquote::before {
+  content: open-quote;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  color: #000000;
+}
+
+.testimonial blockquote::after {
+  content: close-quote;
+  font-size: 4em;
+  position: absolute;
+  right: 10px;
+  bottom: -0.25em;
+  color: #9c27b0;
+}
+
+.testimonial cite {
+  display: block;
+  text-align: right;
+  color: #777;
+  font-size: 0.85em;
+  margin-top: 0.5em;
+}
+
+/* Additional styles for the testimonials carousel */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial-nav {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #324851;
+  padding: 0 20px;
+}
+
+.testimonial-nav:focus {
+  outline: none;
+}
+
+.testimonial {
+  font-size: 1.5em; /* Increases the font size */
+  font-style: italic; /* Adds emphasis */
+  color: #333; /* Darker text for readability */
+  max-width: 80%; /* Sets a max-width to control line length */
+  margin: 0 auto; /* Centers the blockquote */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+.testimonials {
+  background-color: #fff;
+  padding: 2em;
+  text-align: center; /* Centers the text */
+}
+
+/* Make sure to handle responsiveness */
+@media (max-width: 768px) {
+  .team-members-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+  .meet-the-team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+  }
+}
