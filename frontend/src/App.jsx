@@ -13,13 +13,11 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/checkout" element={<Checkout />} />
-
-        {/* Add other routes as needed */}
       </Routes>
       <Footer />
     </Router>
