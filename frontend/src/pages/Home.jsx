@@ -9,43 +9,41 @@ import shopImage from "../assets/images/shopbag.svg";
 import clockImage from "../assets/images/clock.svg";
 import returnImage from "../assets/images/return.svg";
 import greySweatpants from "../assets/images/blackHoodie.jpg";
+import { Fade } from "react-awesome-reveal";
 
 // Home component
 const Home = () => {
   return (
     <div className="home">
-      <nav className="navigation">
-        {/* Assuming you have a separate component for the navigation */}
-      </nav>
-
       <header className="hero">
-        <div className="hero-content">
-          <h1>E-Commerce Store Project</h1>
-          <p>
-            Donec vitae odio quis nisi dapibus malesuada. Nullam ac aliquet
-            velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/shop">
-              <button className="btn primary">Shop Now</button>
-            </Link>
+        <Fade triggerOnce delay={100}>
+          <div className="hero-content">
+            <h1>E-Commerce Store Project</h1>
+            <p>
+              Donec vitae odio quis nisi dapibus malesuada. Nullam ac aliquet
+              velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/shop">
+                <button className="btn primary">Shop Now</button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="hero-image">
-          <img
-            src={homeImage}
-            alt="Elegant living space"
-            className="featured-home-image"
-          />
-        </div>
+
+          <div className="hero-image">
+            <img
+              src={homeImage}
+              alt="Elegant living space"
+              className="featured-home-image"
+            />
+          </div>
+        </Fade>
       </header>
 
-      <FeaturedProducts />
-      <WhyChooseUs />
-
-      <footer>
-        {/* Assuming you have a separate component for the footer */}
-      </footer>
+      <Fade triggerOnce delay={200}>
+        <FeaturedProducts />
+        <WhyChooseUs />
+      </Fade>
     </div>
   );
 };

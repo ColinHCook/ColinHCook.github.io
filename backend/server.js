@@ -55,9 +55,6 @@ app.put("/api/add-to-cart/:productId", (req, res) => {
 app.put("/api/remove-from-cart/:itemId", (req, res) => {
   const itemId = parseInt(req.params.itemId, 10);
 
-  // You should update the database here to set the cart value to 0
-  // Replace the following line with your database update logic
-  // Example using SQLite:
   db.run("UPDATE products SET Cart = 0 WHERE id = ?", [itemId], (err) => {
     if (err) {
       return res.status(500).json({ error: "Database error" });
