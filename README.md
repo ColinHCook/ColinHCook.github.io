@@ -16,6 +16,7 @@ Welcome to the ECommerceWebsite project! This project is a full-stack e-commerce
 
 ### Frontend
 - **React**: A JavaScript library for building user interfaces.
+- **JSX**: A syntax extension for JavaScript.
 - **Vite**: A build tool that provides a fast and optimized development environment.
 - **HTML/CSS**: Styling the application to make it visually appealing.
 
@@ -25,3 +26,7 @@ Welcome to the ECommerceWebsite project! This project is a full-stack e-commerce
 - **SQLite3**: A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.
 - **CORS**: A middleware that can be used to enable Cross-Origin Resource Sharing (CORS) in your application.
 
+
+## Live Demo
+
+Check out the live demo of the project [here](https://colinhcook.github.io/ECommerceWebsite).
