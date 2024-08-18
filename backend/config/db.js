@@ -1,21 +1,18 @@
-console.log("db.js is being executed"); // This should be the first line
-
 const { Pool } = require("pg");
-require("dotenv").config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // This ensures SSL is used without rejecting self-signed certificates
+  },
 });
 
-pool.on("connect", () => {
-  console.log("Connected to the database");
+pool.connect((err) => {
+  if (err) {
+    console.error("Failed to connect to the database:", err);
+  } else {
+    console.log("Connected to the database");
+  }
 });
 
-pool.on("error", (err) => {
-  console.error("Unexpected error on idle client", err);
-  process.exit(-1);
-});
-
-module.exports = {
-  query: (text, params) => pool.query(text, params),
-};
+module.exports = pool;
