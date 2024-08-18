@@ -2,17 +2,18 @@
 const db = require("../config/db");
 
 exports.getAllProducts = async () => {
-  const dbName = process.env.DATABASE_URL.split("/").pop().split("?")[0];
-  console.log(
-    `Running query: SELECT * FROM "public"."products" on database ${dbName}`
-  );
-
   try {
+    // Debugging the current database connection
+    const dbNameRes = await db.query("SELECT current_database();");
+    console.log("Connected to database:", dbNameRes.rows[0].current_database);
+
+    // Perform the query
     const res = await db.query('SELECT * FROM "public"."products"');
+    console.log("Query result:", res.rows);
     return res.rows;
   } catch (err) {
-    console.error(`Error executing query on database ${dbName}:`, err.stack);
-    throw err;
+    console.error("Error executing query", err.stack);
+    throw err; // Re-throw the error after logging it
   }
 };
 
