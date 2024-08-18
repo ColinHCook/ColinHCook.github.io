@@ -3,6 +3,9 @@ require("dotenv").config();
 
 const pool = new Pool({
   connectionString: process.env.INTERNAL_DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // This line allows self-signed certificates
+  },
 });
 
 // Extracting the database name from the connection string
