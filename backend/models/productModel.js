@@ -3,7 +3,9 @@ const db = require("../config/db");
 
 exports.getAllProducts = async () => {
   try {
+    console.log('Running query: SELECT * FROM "public"."products"');
     const res = await db.query('SELECT * FROM "public"."products"');
+    console.log("Query result:", res.rows);
     return res.rows;
   } catch (err) {
     console.error("Error executing query", err.stack);
