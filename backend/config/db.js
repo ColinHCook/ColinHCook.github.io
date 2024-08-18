@@ -1,22 +1,18 @@
 const { Pool } = require("pg");
+require("dotenv").config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false, // This ensures SSL is used without rejecting self-signed certificates
-  },
 });
 
-pool.connect();
+// Extracting the database name from the connection string
+const dbName = process.env.DATABASE_URL.split("/").pop().split("?")[0];
 
-pool.query("SET search_path TO public;", (err, res) => {
-  if (err) {
-    console.error("Error setting search path:", err.stack);
-  } else {
-    console.log("Search path set to public");
-  }
-});
+console.log(`Connected to database: ${dbName}`);
 
 module.exports = {
-  query: (text, params) => pool.query(text, params),
+  query: (text, params) => {
+    console.log(`Executing query on database ${dbName}:`, text);
+    return pool.query(text, params);
+  },
 };
