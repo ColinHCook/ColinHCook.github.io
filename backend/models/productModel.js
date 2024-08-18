@@ -8,7 +8,7 @@ exports.getAllProducts = async () => {
   );
 
   try {
-    const res = await db.query('SELECT * FROM "products"');
+    const res = await db.query('SELECT * FROM "public"."products"');
     return res.rows;
   } catch (err) {
     console.error(`Error executing query on database ${dbName}:`, err.stack);
