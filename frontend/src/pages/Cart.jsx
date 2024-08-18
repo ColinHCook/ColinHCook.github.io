@@ -14,12 +14,15 @@ const Cart = () => {
       // If user is logged in, fetch the cart from the backend
       const fetchCartItems = async () => {
         try {
-          const response = await fetch("http://localhost:5000/api/cart", {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
+          const response = await fetch(
+            "https://ecommercewebsiteapi.onrender.com/api/cart",
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
 
           if (!response.ok) {
             throw new Error("Failed to fetch cart items");
@@ -53,7 +56,7 @@ const Cart = () => {
       const updateBackendCartQuantity = async () => {
         try {
           const response = await fetch(
-            "http://localhost:5000/api/cart/update-quantity",
+            "https://ecommercewebsiteapi.onrender.com/api/cart/update-quantity",
             {
               method: "PUT",
               headers: {
@@ -97,7 +100,7 @@ const Cart = () => {
       const removeItemFromBackendCart = async () => {
         try {
           const response = await fetch(
-            "http://localhost:5000/api/cart/remove",
+            "https://ecommercewebsiteapi.onrender.com/api/cart/remove",
             {
               method: "DELETE",
               headers: {
@@ -136,12 +139,15 @@ const Cart = () => {
       // Clear backend cart for logged-in users
       const clearBackendCart = async () => {
         try {
-          const response = await fetch("http://localhost:5000/api/cart/clear", {
-            method: "DELETE",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
+          const response = await fetch(
+            "https://ecommercewebsiteapi.onrender.com/api/cart/clear",
+            {
+              method: "DELETE",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
 
           if (!response.ok) {
             throw new Error("Failed to clear cart");

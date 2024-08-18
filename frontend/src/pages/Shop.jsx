@@ -14,7 +14,9 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch(
+          "https://ecommercewebsiteapi.onrender.com/api/products"
+        );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -64,7 +66,7 @@ const Shop = () => {
 
     if (token) {
       // User is logged in, send the request to the server
-      fetch(`http://localhost:5000/api/cart/add`, {
+      fetch(`https://ecommercewebsiteapi.onrender.com/api/cart/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
