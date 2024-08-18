@@ -2,7 +2,7 @@
 const db = require("../config/db");
 
 exports.getAllProducts = async () => {
-  const res = await db.query("SELECT * FROM products");
+  const res = await db.query("SELECT * FROM public.products");
   return res.rows;
 };
 
