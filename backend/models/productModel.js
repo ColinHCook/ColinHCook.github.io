@@ -8,7 +8,7 @@ exports.getAllProducts = async () => {
     console.log("Connected to database:", dbNameRes.rows[0].current_database);
 
     // Perform the query
-    const res = await db.query('SELECT * FROM "public"."products"');
+    const res = await db.query("SELECT * FROM public.products");
     console.log("Query result:", res.rows);
     return res.rows;
   } catch (err) {
