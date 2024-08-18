@@ -1,18 +1,17 @@
-const { Pool } = require("pg");
-
-const pool = new Pool({
+const { Client } = require("pg");
+const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false, // This ensures SSL is used without rejecting self-signed certificates
   },
 });
 
-pool.connect((err) => {
+client.connect();
+
+client.query("SET search_path TO public;", (err, res) => {
   if (err) {
-    console.error("Failed to connect to the database:", err);
+    console.error("Error setting search path:", err.stack);
   } else {
-    console.log("Connected to the database");
+    console.log("Search path set to public");
   }
 });
-
-module.exports = pool;
