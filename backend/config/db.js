@@ -17,4 +17,6 @@ pool.query("SET search_path TO public;", (err, res) => {
   }
 });
 
-module.exports = pool;
+module.exports = {
+  query: (text, params) => pool.query(text, params),
+};
