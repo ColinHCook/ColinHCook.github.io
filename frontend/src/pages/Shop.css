@@ -29,37 +29,6 @@ body {
   transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
 }
 
-.filter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-}
-
-.filter-container label {
-  margin-right: 0.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.filter-container select {
-  padding: 0.5rem 1rem;
-  border: 2px solid #333; /* Solid border for a crisp look */
-  border-radius: 20px; /* Rounded edges */
-  outline: none; /* Removes the default focus outline */
-  cursor: pointer; /* Changes cursor style to indicate it's selectable */
-  background-color: white; /* Background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: all 0.3s ease-in-out; /* Smooth transition for interactions */
-}
-
-.filter-container select:hover,
-.filter-container select:focus {
-  border-color: #555; /* Darker border on hover/focus for contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Increased shadow on hover/focus */
-}
-
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -213,4 +182,43 @@ body {
 /* Style for the close button on hover */
 .notification-close:hover {
   color: #ff5252; /* Change the color to your preferred close button color */
+}
+.filter-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the items horizontally */
+  margin-bottom: 20px;
+  gap: 20px; /* Add space between the filter and search input */
+}
+
+.filter-search-container label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.filter-search-container select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+@media (max-width: 768px) {
+  .filter-search-container {
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+    gap: 10px; /* Adjust spacing for smaller screens */
+  }
+
+  .filter-search-container select,
+  .search-input {
+    width: 100%;
+  }
 }

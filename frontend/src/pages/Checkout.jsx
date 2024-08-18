@@ -46,29 +46,8 @@ const Checkout = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email Address *</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div className="form-group">
           <label htmlFor="phone">Phone *</label>
           <input type="tel" id="phone" name="phone" required />
-        </div>
-
-        <div className="form-group form-group-checkbox">
-          <input type="checkbox" id="create-account" name="create-account" />
-          <label htmlFor="create-account">Create an account?</label>
-        </div>
-
-        <div className="form-group form-group-checkbox">
-          <input
-            type="checkbox"
-            id="ship-different-address"
-            name="ship-different-address"
-          />
-          <label htmlFor="ship-different-address">
-            Ship to a different address?
-          </label>
         </div>
 
         <div className="form-group">

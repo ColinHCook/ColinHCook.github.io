@@ -36,6 +36,8 @@
   font-weight: 600; /* Medium font weight for a touch of emphasis */
   letter-spacing: 0.05em; /* Space out the letters slightly */
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background: none;
+  border: none;
 }
 
 .nav-link::after {
@@ -59,4 +61,44 @@
 .nav-link:hover::after,
 .nav-link:focus::after {
   transform: scaleX(1); /* Full width bar under the link on hover or focus */
+}
+
+/* Styling for the Logout button */
+.logout-button {
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.logout-button::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #324851;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  color: #007bff; /* Color change on hover or focus */
+  transform: translateY(-2px); /* Slight upward shift on hover */
+}
+
+.logout-button:hover::after,
+.logout-button:focus::after {
+  transform: scaleX(1); /* Full width bar under the link on hover or focus */
+}
+
+/* Remove the default focus outline */
+.logout-button:focus {
+  outline: none;
 }

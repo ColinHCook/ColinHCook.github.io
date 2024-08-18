@@ -4,27 +4,27 @@ import CEOImage from "../assets/images/CEO.png";
 
 const teamMembers = [
   {
-    name: "Colin Cook",
+    name: "Adam Smith",
     position: "CEO",
-    bio: "[Name] excels in [Role], combining industry expertise with a dynamic approach to drive success and innovation at our company.",
+    bio: "Adam excels in this role, combining industry expertise with a dynamic approach to drive success and innovation at our company.",
     image: "path-to-image",
   },
   {
     name: "Jane Doe",
     position: "CFO",
-    bio: "[Name] excels in [Role], combining industry expertise with a dynamic approach to drive success and innovation at our company.",
+    bio: "Jane excels in this role, combining industry expertise with a dynamic approach to drive success and innovation at our company.",
     image: "path-to-image",
   },
   {
     name: "Bob Smith",
     position: "CTO",
-    bio: "[Name] excels in [Role], combining industry expertise with a dynamic approach to drive success and innovation at our company.",
+    bio: "Bob excels in this role, combining industry expertise with a dynamic approach to drive success and innovation at our company.",
     image: "path-to-image",
   },
   {
-    name: "Joe Swanson",
+    name: "Joe Smith",
     position: "Sales Rep",
-    bio: "[Name] excels in [Role], combining industry expertise with a dynamic approach to drive success and innovation at our company.",
+    bio: "Joe excels in this role, combining industry expertise with a dynamic approach to drive success and innovation at our company.",
     image: "path-to-image",
   },
 ];
@@ -70,7 +70,7 @@ const AboutUs = () => {
       <section className="our-mission">
         <h2>Our Mission</h2>
         <p>
-          At [Company Name], our mission is to lead the industry by setting the
+          At our company, our mission is to lead the industry by setting the
           standard for excellence in [Primary Field or Service]. We are
           dedicated to innovating and delivering high-quality products and
           services that exceed our customers' expectations. Through our

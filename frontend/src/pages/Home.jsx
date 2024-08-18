@@ -18,7 +18,7 @@ const Home = () => {
       <header className="hero">
         <Fade triggerOnce delay={100}>
           <div className="hero-content">
-            <h1>E-Commerce Store Project</h1>
+            <h1>E-Commerce Shoe Store</h1>
             <p>
               Donec vitae odio quis nisi dapibus malesuada. Nullam ac aliquet
               velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
@@ -66,35 +66,35 @@ const FeaturedProducts = () => {
         <div className="product">
           <Link to="/shop" className="Link">
             <img
-              src={blackShirt}
-              alt="Black Shirt"
+              src="assets/images/shoe1.jpg"
+              alt="Comfort Gel"
               className="featured-product-image"
             />
 
-            <h3>Black Shirt</h3>
-            <p className="price">$40.00</p>
+            <h3>Comfort Gel</h3>
+            <p className="price">$19.99</p>
           </Link>
         </div>
         <div className="product">
           <Link to="/shop" className="Link">
             <img
-              src={blackShirt}
-              alt="Grey Sweatpants"
+              src="assets/images/shoe2.jpg"
+              alt="Comfort Gel"
               className="featured-product-image"
             />
-            <h3>Black Hoodie</h3>
-            <p className="price">$15.00</p>
+            <h3>Arch Support</h3>
+            <p className="price">$24.99</p>
           </Link>
         </div>
         <div className="product">
           <Link to="/shop" className="Link">
             <img
-              src={blackShirt}
-              alt="Womens Shirts"
+              src="assets/images/shoe3.jpg"
+              alt="Comfort Gel"
               className="featured-product-image"
             />
-            <h3>Blue Shirt</h3>
-            <p className="price">$47.00</p>
+            <h3>Heel Cushion</h3>
+            <p className="price">$14.99</p>
           </Link>
         </div>
       </div>

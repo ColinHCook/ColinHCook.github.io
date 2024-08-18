@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ColinHCook.github.io/home",
+  "homepage": "https://ColinHCook.github.io/ECommerceWebsite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
+    "axios": "^1.7.4",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.11",
     "react-dom": "^18.2.0",

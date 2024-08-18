@@ -1,9 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Assuming you're using react-router-dom for navigation
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./Header.css"; // Make sure to create a Header.css file with the styles
 import logoImage from "../../assets/images/shopping-cart-outline.svg"; // Update the path to your logo image file
 
-const Header = () => {
+const Header = ({ isAuthenticated, onLogout }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    onLogout(); // Call the logout function passed via props
+    navigate("/"); // Redirect to home page
+  };
+
   return (
     <header className="header">
       <Link to="/" className="header-logo">
@@ -26,6 +33,20 @@ const Header = () => {
         <Link to="/cart" className="nav-link">
           Cart
         </Link>
+        {isAuthenticated ? (
+          <button onClick={handleLogout} className="nav-link">
+            Logout
+          </button>
+        ) : (
+          <>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
+          </>
+        )}
       </nav>
     </header>
   );
